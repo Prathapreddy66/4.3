@@ -1,0 +1,86 @@
+<html>
+  <form>
+    <div style="text-align-last: right; padding-right: 45%">
+      <h1>Update Events</h1>
+      <input
+        style="text-align-last: start"
+        type="hidden"
+        name="event_id"
+        id="event_id"
+        value="{{ data.event_id }}"
+        #event_id
+      /><br />
+      <label><b>Event Name</b></label
+      >&nbsp;&nbsp;&nbsp;&nbsp;
+      <input
+        style="text-align-last: start"
+        type="text"
+        name="name"
+        id="name"
+        #name
+        value="{{ data.title }}"
+      /><br />
+      <label><b>Description</b></label
+      >&nbsp;
+      <input
+        style="text-align-last: start"
+        type="text"
+        name="description"
+        id="description"
+        value="{{ data.description }}"
+        #description
+      /><br />
+      <label><b>Date</b></label
+      >&nbsp;
+      <input
+        style="text-align-last: start"
+        type="text"
+        name="date"
+        id="date"
+        value="{{ data.date }}"
+        #date
+      /><br />
+      <label><b>Time</b></label
+      >&nbsp;
+      <input
+        style="text-align-last: start"
+        type="text"
+        name="time"
+        id="time"
+        value="{{ data.time }}"
+        #time
+      /><br />
+      <label><b>Status</b></label
+      >&nbsp;
+      <input
+        style="text-align-last: start"
+        type="text"
+        name="status"
+        id="status"
+        value="{{ data.status }}"
+        #status
+      /><br /><br />
+      <button
+        type="submit"
+        style="margin-right: 6%"
+        (click)="
+          Update(
+            event_id.value,
+            title.value,
+            description.value,
+            date.value,
+            time.value,
+            status.value
+          )
+        "
+      >
+        Update
+      </button>
+      <button type="button" style="margin-right: 15px">
+        <a routerLink="/home" style="text-decoration: none; color: black"
+          >Back</a
+        >
+      </button>
+    </div>
+  </form>
+</html>
